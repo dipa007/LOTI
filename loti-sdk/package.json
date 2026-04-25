@@ -1,0 +1,28 @@
+{
+  "name": "@dipayan_/loti-client",
+  "version": "1.0.0",
+  "description": "The official Node.js SDK for the LOTI (Local OTP Testing Infrastructure) ecosystem.",
+  "main": "src/index.js",
+  "type": "module",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/loti"
+  },
+  "keywords": [
+    "otp",
+    "sms",
+    "testing",
+    "local-infrastructure",
+    "bullmq",
+    "redis"
+  ],
+  "author": "Dipayan Sinha",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.15.2"
+  }
+}

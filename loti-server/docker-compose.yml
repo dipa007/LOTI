@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    
+    volumes:
+      - redis_data:/data
+    # Tells Redis to persist data to disk so queues survive restarts
+    command: redis-server --save 60 1 --loglevel warning
+
+  loti-server:
+    build: .
+    # This reads the PORT variable passed by our loti-cli
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+    environment:
+      - PORT=${PORT:-3000}
+      - REDIS_HOST=redis
+      - GLOBAL_RATE_LIMIT=3
+      - RETRY_BACKOFF_INMS=5000
+    depends_on:
+      - redis
+      
+
+volumes:
+  redis_data:
