@@ -1,6 +1,9 @@
 # 🚫 Temporarily Ignore Root Folders & Files
 loti-mobile/
 PRDs/
+LOTI.apk
+LOTI.md
+.gitignore
 
 # 📦 Global Dependencies (Ignores node_modules in every folder automatically)
 node_modules/
